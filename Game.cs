@@ -9,7 +9,7 @@ using System.Text;
 */
 
 using M4Assignment;
-{
+
     internal class Game
     {
 
@@ -53,4 +53,3 @@ using M4Assignment;
             return "";
         }
     }
-}
