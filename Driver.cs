@@ -8,27 +8,30 @@ class Driver
     }
     static void Main(string[] args)
     {
-        int[] board = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+        string[] board = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
     }
 
-    static void getPlayerAChoice(int[] board) {
+    static void getPlayerAChoice(str[] board) {
+        Game game = new Game(board);
+        game.printBoard();
         Console.WriteLine("Player A, enter your choice: ");
         int choice = int.Parse(Console.ReadLine());
         board[choice - 1] = "X";
     }
-
-    static void getPlayerBChoice(int[] board) {
+    static void getPlayerBChoice(string[] board) {
+        Game game = new Game(board);
+        game.printBoard();
         Console.WriteLine("Player B, enter your choice: ");
-        int choice = int.Parse(Console.ReadLine());
+        int choice = int.Parse(Console.ReadLinge());
         board[choice - 1] = "O";
     }
 
-    static void checkForWin(int[] board) {
-
-    Game game = new Game(board);
-
-
-
-
+    static bool checkForWin(string[] board) {
+        Game game = new Game(board);
+        if game.checkForWin() != "" {
+            Console.WriteLine(game.checkForWin());
+            return true;
+        }
+        return false;
 }
