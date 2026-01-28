@@ -10,9 +10,19 @@ using System.Text;
 
 namespace M4Assignment
 {
-
     internal class Game
     {
+
+        public string PrintBoard(string[] board)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine(" " + board[0] + " | " + board[1] + " | " + board[2]);
+            sb.AppendLine("---+---+---");
+            sb.AppendLine(" " + board[3] + " | " + board[4] + " | " + board[5]);
+            sb.AppendLine("---+---+---");
+            sb.AppendLine(" " + board[6] + " | " + board[7] + " | " + board[8]);
+            return sb.ToString();
+        }
 
     }
 }
