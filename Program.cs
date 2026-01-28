@@ -1,8 +1,11 @@
-﻿// The “Driver” class (the Program.cs class with the main method where the program begins)
-// will:
-//     • Welcome the user to the game
-//     • Create a game board array to store the players’ choices
-//     • Ask each player in turn for their choice and update the game board array
-//     • Print the board by calling the method in the supporting class
-//     • Check for a winner by calling the method in the supporting class, and notify the players
-// when a win has occurred and which player won the game
+﻿using namespace M4Assignment;
+
+void main() {
+    Driver.welcomeMessage();
+    string[] board = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+    while (!Driver.checkForWin(board)) {
+        Driver.getPlayerXChoice(board);
+        Driver.getPlayerOChoice(board);
+    }
+    Console.WriteLine("Game over!");
+}
