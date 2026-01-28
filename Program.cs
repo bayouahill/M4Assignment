@@ -1,4 +1,4 @@
-﻿using namespace M4Assignment;
+﻿namespace M4Assignment;
 
 void main() {
     Driver.welcomeMessage();
