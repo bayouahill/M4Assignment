@@ -12,24 +12,22 @@ class Driver
 
     }
 
-    static void getPlayerXChoice(str[] board) {
-        Game game = new Game(board);
-        game.printBoard();
+    static void getPlayerXChoice(string[] board) {
+        Game.printBoard(board);
         Console.WriteLine("Player X, enter your choice: ");
         int choice = int.Parse(Console.ReadLine());
         board[choice - 1] = "X";
     }
     static void getPlayerOChoice(string[] board) {
-        Game game = new Game(board);
-        game.printBoard();
+        Game.PrintBoard(board);
         Console.WriteLine("Player O, enter your choice: ");
         int choice = int.Parse(Console.ReadLine());
         board[choice - 1] = "O";
     }
 
     static bool checkForWin(string[] board) {
-        Game game = new Game(board);
-        if game.checkForWin() != "" {
+
+        if (Game.checkForWin(board) != "") {
             Console.WriteLine("The winner is Player " + game.checkForWin());
             return true;
         }
