@@ -8,12 +8,12 @@ using System.Text;
  * Contain a method that receives the game board array as input and returns if there is a winner and who it was
 */
 
-using M4Assignment;
-
+namespace M4Assignment
+{
     internal class Game
     {
 
-        public string PrintBoard(string[] board)
+        public static string PrintBoard(string[] board)
         {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine(" " + board[0] + " | " + board[1] + " | " + board[2]);
@@ -24,7 +24,7 @@ using M4Assignment;
             return sb.ToString();
         }
 
-        public string CheckWinner(string[] board)
+        public static string CheckWinner(string[] board)
         {
 
             int[][] winLines =
@@ -44,7 +44,7 @@ using M4Assignment;
                 string a = board[line[0]];
                 string b = board[line[1]];
                 string c = board[line[2]];
-                if (a == "X" || a == "O" && a == b && b == c)
+                if ((a == "X" || a == "O") && a == b && b == c)
                 {
                     return a;
                 }
@@ -53,3 +53,4 @@ using M4Assignment;
             return "";
         }
     }
+}
