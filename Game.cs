@@ -12,9 +12,10 @@ namespace M4Assignment
 {
     internal class Game
     {
-
+        // Method to print the Tic Tac Toe board
         public static string PrintBoard(string[] board)
         {
+            // using string builder to build the board string
             StringBuilder sb = new StringBuilder();
             sb.AppendLine(" " + board[0] + " | " + board[1] + " | " + board[2]);
             sb.AppendLine("---+---+---");
@@ -24,9 +25,10 @@ namespace M4Assignment
             return sb.ToString();
         }
 
+        // Method to check for a winner
         public static string CheckWinner(string[] board)
         {
-
+            // All possible winning combinations
             int[][] winLines =
             {
                 new int[] { 0, 1, 2 },
@@ -39,6 +41,7 @@ namespace M4Assignment
                 new int[] { 2, 4, 6 }
             };
 
+            // Check each winning combination
             foreach (int[] line in winLines)
             {
                 string a = board[line[0]];
